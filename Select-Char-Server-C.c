@@ -61,7 +61,7 @@ void writeLog(int32_t logFd, const char *readyMessage);
 int32_t main(int argc, char *argv[]){
     if (argc < 3U)
     {
-        const char MissingArgumentsError[] = "Error: Missing required arguments.\nUsage: ./server <port> <max_users>\n";
+        const char MissingArgumentsError[] = "Error: Missing required arguments.\nUsage: ./Select-Char-Server-C <port> <max_users>\n";
         checkSyscall(write(2, MissingArgumentsError, sizeof(MissingArgumentsError) - 1), "Syscall: write missing arguments error");
         exit(EXIT_FAILURE);
     }
