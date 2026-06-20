@@ -561,7 +561,7 @@ bool validateBuffer(char *buffer, ssize_t bytesRead, int32_t maxSize){
         return false;
     }
 
-    if(bytesRead >= (maxSize - 1))
+    if(bytesRead >= maxSize)
     {
         const char errBufferOverflow[] = "Security alert: incoming buffer overflow detected\n";
         (void)write(1, errBufferOverflow, sizeof(errBufferOverflow) - 1U);
